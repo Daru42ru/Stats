@@ -1,51 +1,47 @@
 package org.example;
 
 public class StatService {
-    public int SaleAmount(int[] Sales) {
-        int Amount = 0;
-        for (int i : Sales) {
-            Amount += i;
+    public int saleAmount(int[] sales) {
+        int amount = 0;
+        for (int i : sales) {
+            amount += i;
         }
-        return Amount;
+        return amount;
     }
-    public int AverageSalesAmount (int[] Sales) {
-        int Amount = 0;
-        for (int i : Sales) {
-            Amount += i;
-        }
-        return (Amount / Sales.length);
+    public int averageSalesAmount (int[] sales) {
+        return saleAmount(sales)/sales.length;
     }
-    public int MaxSales(int[] Sales) {
+    public int maxSales(int[] sales) {
         int maxMonth = 0;
-        for (int i = 0; i < Sales.length; i++) {
-            if (Sales[i] >= Sales[maxMonth]) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] >= sales[maxMonth]) {
                 maxMonth = i;
             }
         }
         return maxMonth + 1;
     }
-    public int MinSales(int[] Sales) {
+    public int minSales(int[] sales) {
         int minMonth = 0;
-        for (int i = 0; i < Sales.length; i++) {
-            if (Sales[i] <= Sales[minMonth]) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] <= sales[minMonth]) {
                 minMonth = i;
             }
         }
         return minMonth + 1;
     }
-    public int AboveAverageSales (int[] Sales) {
+    public int aboveAverageSales (int[] sales) {
         int count = 0;
-        for (int i = 0; i < Sales.length; i++) {
-            if (Sales[i] > AverageSalesAmount(Sales)) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > averageSalesAmount(sales)) {
                 count++;
             }
         }
         return count;
     }
-    public int SellingBelowAverage (int[] Sales) {
+    public int sellingBelowAverage (int[] sales) {
         int count = 0;
-        for (int i = 0; i < Sales.length; i++) {
-            if (Sales[i] < AverageSalesAmount(Sales)) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < averageSalesAmount(sales)) {
                 count++;
             }
         }

@@ -4,51 +4,51 @@ import org.junit.jupiter.api.Assertions;
 
 public class StatServiceTest {
     @Test
-    public void ShoudFindSaleAmount () {
+    public void shouldFindSaleAmount () {
         StatService service = new StatService();
-        int[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedSaleAmount = 180;
-        int actualSaleAmount = service.SaleAmount (Sales);
+        int actualSaleAmount = service.saleAmount (sales);
         Assertions.assertEquals (expectedSaleAmount, actualSaleAmount);
     }
     @Test
-    public void ShoudFindAverageSalesAmount () {
+    public void shouldFindAverageSalesAmount () {
         StatService service = new StatService();
-        int[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedAverageSalesAmount = 15;
-        int actualAverageSalesAmount = service.AverageSalesAmount (Sales);
+        int actualAverageSalesAmount = service.averageSalesAmount (sales);
         Assertions.assertEquals (expectedAverageSalesAmount, actualAverageSalesAmount);
     }
     @Test
-    public void ShoudFindMaxSales () {
+    public void shouldFindMaxSales () {
         StatService service = new StatService();
-        int[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMaxSales = 8;
-        int actualMaxSales = service.MaxSales (Sales);
+        int actualMaxSales = service.maxSales (sales);
         Assertions.assertEquals (expectedMaxSales, actualMaxSales);
     }
     @Test
-    public void ShoudFindMinSales () {
+    public void shouldFindMinSales () {
         StatService service = new StatService();
-        int[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMinSales = 9;
-        int actualMinSales = service.MinSales (Sales);
+        int actualMinSales = service.minSales (sales);
         Assertions.assertEquals (expectedMinSales, actualMinSales);
     }
     @Test
-    public void ShoudFindAboveAverageSales () {
+    public void shouldFindAboveAverageSales () {
         StatService service = new StatService();
-        int[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedAboveAverageSales = 5;
-        int actualAboveAverageSales = service.AboveAverageSales (Sales);
+        int actualAboveAverageSales = service.aboveAverageSales (sales);
         Assertions.assertEquals (expectedAboveAverageSales, actualAboveAverageSales);
     }
     @Test
-    public void ShoudFindSellingBelowAverage () {
+    public void shouldFindSellingBelowAverage () {
         StatService service = new StatService();
-        int[] Sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedSellingBelowAverage = 5;
-        int actualSellingBelowAverage = service.SellingBelowAverage (Sales);
+        int actualSellingBelowAverage = service.sellingBelowAverage (sales);
         Assertions.assertEquals (expectedSellingBelowAverage, actualSellingBelowAverage);
     }
 }
