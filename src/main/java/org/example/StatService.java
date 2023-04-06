@@ -40,8 +40,8 @@ public class StatService {
     public int aboveAverageSales(int[] sales) {
         int count = 0;
         int average = average(sales);
-        for (int i = 0; i > sales.length; i++) {
-            if (sales[i] < average) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > average) {
                 count++;
             }
         }
